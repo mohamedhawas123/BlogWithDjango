@@ -2,6 +2,7 @@ from django.db import models
 from django.contrib.auth.models import User
 from django.utils import timezone
 from django.urls import reverse
+from taggit.managers import TaggableManager
 
 STATUS_CHOICES = (
     ('draft', 'Draft'),
@@ -33,7 +34,7 @@ class Post(models.Model):
 
     published = PublishManager()
 
-
+    tags = TaggableManager()
 
 class Comment(models.Model):
     
