@@ -11,6 +11,20 @@
   <p>
     <a href="{% url 'blogg:post_share' post.id %}">Share this Post</a>
   </p>
+  <h2>Similar posts</h2>
+
+
+{% for sim in similir_posts %}
+
+<p>
+  <a href="{{ sim.get_absolute_url }}">{{sim.title}}</a>
+</p>
+{% empty %}
+<p>there's no similar post</p>
+
+{% endfor %}
+
+
 
   {% with comments.count as total_comments %}
   <h2>
