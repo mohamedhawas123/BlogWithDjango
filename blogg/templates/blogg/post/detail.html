@@ -1,4 +1,6 @@
 {% extends "blogg/base.html" %}
+{% load blogg_tags %}
+
 {% block title %}{{ post.title }}{% endblock %}
 {% block content %}
   <h1>{{ post.title }}</h1>
@@ -38,7 +40,7 @@
       Comment {{ forloop.counter }} by {{ comment.name }}
       {{ comment.created }}
     </p>
-    {{ comment.body|linebreaks }}
+    {{ comment.body|markdown  }}
   </div>
 {% empty %}
   <p>There are no comments yet.</p>

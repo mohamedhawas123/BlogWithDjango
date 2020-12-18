@@ -1,0 +1,8 @@
+<h3>Most commented post</h3>
+<ul>
+    {% for post in comment %}
+    <li>
+        <a href="{{post.get_absolute_url}}">{{post.title}}</a>
+    </li>
+    {% endfor %}
+</ul>
