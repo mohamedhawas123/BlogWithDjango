@@ -15,6 +15,7 @@ class PublishManager(models.Manager):
 
 class Post(models.Model):
     title = models.CharField(max_length=55)
+    name = models.CharField(max_length=33,blank=True, null=True)
     slug = models.SlugField(max_length=55, unique_for_date='publish')
     author = models.ForeignKey(User, related_name='blog_posts' ,on_delete=models.CASCADE)
     body = models.TextField()

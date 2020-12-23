@@ -25,7 +25,7 @@ SECRET_KEY = 'jg5%!zlb%bjg_iguz$s5fsg$l!yx$#6f@mywl%)bwi988_ypph'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost', '127.0.0.1']
 
 
 # Application definition
@@ -33,6 +33,7 @@ ALLOWED_HOSTS = []
 SITE_ID = 1
 
 INSTALLED_APPS = [
+    
     'django.contrib.sites',
     'django.contrib.sitemaps',
     'django.contrib.admin',
@@ -42,8 +43,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.postgres',
+    'taggit',
     'blogg',
-    'taggit'
 ]
 
 MIDDLEWARE = [
@@ -83,9 +84,9 @@ WSGI_APPLICATION = 'blog.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'blo',
-        'USER': 'blo',
-        'PASSWORD':'thugstools123',
+        'NAME': 'ahd',
+        'USER': 'ahd',
+        'PASSWORD':'panzer123',
         'HOST':'localhost',
         'PORT':'5432',
 
